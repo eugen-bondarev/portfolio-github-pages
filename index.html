@@ -6,10 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style/main.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet"> -->    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Work+Sans:wght@300;400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;900&display=swap" rel="stylesheet">
+
     <script src="https://kit.fontawesome.com/d6cf7c96ee.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <script src="scripts/main.js"></script>
 </head>
 <body>
     <div class="contacts">
@@ -37,40 +46,53 @@
     </div>
     <div class="container center">
         <h2>Meine Projekte</h2>
-        <div class="add-border list-item project">
-            <h3 class="project__name">
-                Ein Programm fürs Teilen von Dateien innerhalb eines WLAN-Netzes
-            </h3>
+        <div class="project">
+            <div class="project__name">
+                <h3 class="no-margin">
+                    Ein Programm fürs Teilen von Dateien innerhalb eines WLAN-Netzes
+                </h3>
+                <a href="https://github.com/eugen-bondarev/homeNetShare" target="_blank" class="button">
+                    <i class="fa-xl fa-brands fa-github"></i>
+                </a>
+            </div>
             <div class="description">
-                <img class="preview" src="images/projects/homeNetShare.png" alt="">
+                <div class="preview">
+                    <img src="images/projects/homeNetShare_0.png" alt="">
+                    <img src="images/projects/homeNetShare_1.png" alt="">
+                </div>
                 <div class="text">
                     <h3 class="tech">Tech-Stack: Java, OpenGL, ImGui</h3>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, minima corrupti expedita, rem fugit recusandae ad dignissimos illum aperiam at ut rerum ullam voluptas est explicabo dolores itaque maiores dicta?
                 </div>
             </div>
         </div>
-        <div class="project"> first proj </div>
-        <div class="project"> first proj </div>
-        <div class="project"> first proj </div>
-        <div class="project"> first proj </div>
-        <div class="project"> first proj </div>
-        <div class="project"> first proj </div>
-        <div class="project"> first proj </div>
-        <div class="project"> first proj </div>
-        <div class="project"> first proj </div>
-        <div class="project"> first proj </div>
-        <div class="project"> first proj </div>
-        <div class="project"> first proj </div>
-        <div class="project"> first proj </div>
-        <div class="project"> first proj </div>
-        <div class="project"> first proj </div>
-        <div class="project"> first proj </div>
-        <div class="project"> first proj </div>
-        <div class="project"> first proj </div>
-        <div class="project"> first proj </div>
-        <div class="project"> first proj </div>
-        <div class="project"> first proj </div>
-        <div class="project"> first proj </div>
+
+        <div class="project">
+            <div class="project__name">
+                <h3 class="no-margin">
+                    Besondere Lernleistung im Fach Informatik (Abitur 2022)
+                </h3>
+
+                <div>
+                    <a href="https://github.com/eugen-bondarev/homeNetShare" target="_blank" class="button">
+                        <i class="fa-xl fa-solid fa-file-lines"></i>
+                    </a>
+                    <a href="https://github.com/eugen-bondarev/homeNetShare" target="_blank" class="button">
+                        <i class="fa-xl fa-brands fa-github"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="description">
+                <div class="preview">
+                    <img src="images/projects/homeNetShare_0.png" alt="">
+                    <img src="images/projects/homeNetShare_1.png" alt="">
+                </div>
+                <div class="text">
+                    <h3 class="tech">Tech-Stack: C++, eigen, OpenGL, ImGui</h3>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, minima corrupti expedita, rem fugit recusandae ad dignissimos illum aperiam at ut rerum ullam voluptas est explicabo dolores itaque maiores dicta?
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

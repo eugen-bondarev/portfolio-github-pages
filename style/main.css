@@ -1,11 +1,21 @@
 * {
-    font-family: 'Inconsolata', monospace;
+    /* font-family: 'Inconsolata', monospace; */
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'Work Sans', sans-serif;
     color: #033B3D;
+}
+
+.no-margin {
+    margin: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
     margin-bottom: 10px;
+}
+
+.container {
+    width: 1000px;
 }
 
 body {
@@ -45,11 +55,14 @@ header {
     padding: 30px 0;
 }
 
+header .button, header .link {
+    margin-left: 20px;
+}
+
 .button, .link {
     cursor: pointer;
     font-size: 14px;
     border: none;
-    margin-right: 20px;
 }
 
 .button {    
@@ -57,6 +70,7 @@ header {
     background: white;
     padding: 10px 20px;
     border-radius: 100px;
+    text-decoration: none;
 }
 
 .link {
@@ -85,16 +99,20 @@ header {
     padding: 20px;
     margin-bottom: 20px;
     transition: 0.3s;
-    border: 1px solid white;
+    /* border-radius: 40px; */
+    border: 2px solid transparent;
 }
 
 .project:hover {
-    border: 1px solid rgb(221, 221, 221);
+    border: 2px solid #033B3D;
 }
 
 .project__name {
     position: relative;
     padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .project__name::after {
@@ -124,16 +142,13 @@ header {
     width: 300px;
 }
 
-.container {
-    width: 800px;
-}
-
 .center {
     margin: auto;
 }
 
 .subtitle {
-    color: rgb(148, 148, 148);
+    color: rgb(175, 175, 175);
+    font-weight: 300;
 }
 
 .contacts {
