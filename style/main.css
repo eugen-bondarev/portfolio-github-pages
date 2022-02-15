@@ -3,6 +3,15 @@
   color: #033B3D;
 }
 
+.fade-enter-active, .fade-leave-active {
+  -webkit-transition: opacity .5s;
+  transition: opacity .5s;
+}
+
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
 .no-margin {
   margin: 0;
 }
@@ -51,6 +60,66 @@ body::after {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-bottom: 50px;
+  height: 50px;
+}
+
+.menu .button {
+  text-transform: uppercase;
+  padding: 0;
+  font-size: 1.2em;
+  margin-right: 20px;
+  position: relative;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.menu .button::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  display: block;
+  background: #033B3D;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.menu .button:hover {
+  font-size: 1.4em;
+}
+
+.menu .button:hover::after {
+  width: 100%;
+}
+
+.menu .button h2 {
+  font-weight: 300;
+}
+
+.menu .menu--selected {
+  font-size: 1.2em;
+}
+
+.menu .menu--selected::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  display: block;
+  background: #033B3D;
 }
 
 header {
@@ -191,6 +260,44 @@ header .button, header .link {
 
 .project .preview video, .project .preview img {
   width: 300px;
+}
+
+.tech {
+  margin-bottom: 20px;
+}
+
+.tech__el {
+  cursor: default;
+  font-weight: 400;
+  background-color: #e5e5e5;
+  padding: 2px 10px;
+  border-radius: 4px;
+  display: inline;
+  margin-left: 5px;
+}
+
+.languages .section {
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.languages .section .tech {
+  margin: 0;
+}
+
+.languages .section table td {
+  padding: 20px;
+  border: 1px solid #033B3D;
+}
+
+.languages .section table .tech__el {
+  display: block;
+  margin-bottom: 5px;
 }
 
 .center {

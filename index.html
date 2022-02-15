@@ -43,36 +43,92 @@
             <h4 class="subtitle">Software-Entwickler</h4>
         </div>
         <div class="container center">
-            <h2>Meine Projekte</h2>
-            <div class="project" v-for="project in projects">
-                <div class="project__name">
-                    <h3 class="no-margin">
-                        {{ project.title }}
-                    </h3>
-                    <div>
-                        <a v-for="link in project.links" :href="link.href" target="_blank" class="button">
-                            <i class="fa-xl" :class="link.cls"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="description">
-                    <div class="preview">
-                        <div v-for="item in project.gallery">
-                            <img v-if="item.includes('png')" :src="item" alt="">
-                            <video v-else muted autoplay loop>
-                                <source :src="item" type="video/mp4">
-                            </video>
+            <div class="menu">
+                <button @click="switchMode('projects', $event)" class="button menu--selected">Meine Projekte</button>
+                <button @click="switchMode('languages', $event)" class="button">Was ich beherrsche</button>
+                <button @click="switchMode('projects', $event)" class="button">Was mich fasziniert</button>
+            </div>
+            <transition name="fade">
+                <div v-if="state == 'projects'" class="projects">
+                    <div class="project" v-for="project in projects">
+                        <div class="project__name">
+                            <h3 class="no-margin">
+                                {{ project.title }}
+                            </h3>
+                            <div>
+                                <a v-for="link in project.links" :href="link.href" target="_blank" class="button">
+                                    <i class="fa-xl" :class="link.cls"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="description">
+                            <div class="preview">
+                                <div v-for="item in project.gallery">
+                                    <img v-if="item.includes('png')" :src="item" alt="">
+                                    <video v-else muted autoplay loop>
+                                        <source :src="item" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+                            <div class="text">
+                                <h3 class="tech">
+                                    Tech-Stack:
+                                    <div v-for="item in project.techStack" class="tech__el">{{ item }}</div>
+                                </h3>
+                                {{ project.description }}
+                            </div>
                         </div>
                     </div>
-                    <div class="text">
-                        <h3 class="tech">
-                            Tech-Stack:
-                            <div v-for="item in project.techStack" class="tech__el">{{ item }}</div>
-                        </h3>
-                        {{ project.description }}
+                </div>
+            </transition>
+            <transition name="fade">
+                <div v-if="state == 'languages'" class="languages">
+                    <div class="section">
+                        <h3 class="no-margin">Programmiersprachen: </h3>
+                        <div class="tech no-margin">
+                            <div class="tech__el">C++</div>
+                            <div class="tech__el">Java</div>
+                            <div class="tech__el">Python</div>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <table>
+                            <tr>
+                                <th>Sprache</th>
+                                <th>Tools</th>
+                            </tr>
+                            <tr class="tech">
+                                <td>C++</td>
+                                <td>
+                                    <div class="tech__el">CMake</div>
+                                    <div class="tech__el">vcpkg</div>
+                                    <div class="tech__el">OpenGL</div>
+                                    <div class="tech__el">Vulkan</div>
+                                    <div class="tech__el">glfw3</div>
+                                    <div class="tech__el">ImGui</div>
+                                    <div class="tech__el">eigen</div>
+                                    <div class="tech__el">boost</div>
+                                </td>
+                            </tr>
+                            <tr class="tech">
+                                <td>Java</td>
+                                <td>
+                                    <div class="tech__el">Maven</div>
+                                    <div class="tech__el">Sockets</div>
+                                </td>
+                            </tr>
+                        </table>
+                        <!-- <h3 class="no-margin">Lieblingsbibliotheken:</h3>
+                        <div class="tech no-margin">
+                            <div class="tech__el">GLEW</div>
+                            <div class="tech__el">glfw3</div>
+                            <div class="tech__el">ImGui</div>
+                            <div class="tech__el">Java</div>
+                            <div class="tech__el">Python</div>
+                        </div> -->
                     </div>
                 </div>
-            </div>
+            </transition>
         </div>
     </div>
 </body>
