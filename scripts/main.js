@@ -80,7 +80,7 @@ const app = new Vue({
                     links: [
                         {
                             cls: "fa-brands fa-github",
-                            href: "https://github.com/eugen-bondarev/VulkanMapRenderer"
+                            href: "https://github.com/eugen-bondarev/NaturaForge"
                         }
                     ],
                     gallery: [
@@ -95,7 +95,7 @@ const app = new Vue({
                     links: [
                         {
                             cls: "fa-brands fa-github",
-                            href: "https://github.com/eugen-bondarev/VulkanMapRenderer"
+                            href: "https://github.com/eugen-bondarev/anima"
                         }
                     ],
                     gallery: [
