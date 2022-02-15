@@ -27,7 +27,8 @@ const app = new Vue({
                         "images/projects/bll_0.png",
                         "images/projects/bll_2.png",
                     ],
-                    techStack: ["C++", "vcpkg", "CMake", "eigen", "OpenGL", "ImGui"]
+                    techStack: ["C++", "vcpkg", "CMake", "eigen", "OpenGL", "ImGui"],
+                    description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis velit soluta rem, facere recusandae deserunt excepturi praesentium facilis. Saepe non accusamus adipisci hic voluptatem veniam, animi id minus qui in."
                 },
                 {
                     title: "Eine App fürs Teilen von Dateien innerhalb eines WLAN-Netzes",
@@ -41,7 +42,8 @@ const app = new Vue({
                         "images/projects/homeNetShare_0.png",
                         "images/projects/homeNetShare_1.png"
                     ],
-                    techStack: ["Java", "maven", "OpenGL", "ImGui"]
+                    techStack: ["Java", "maven", "OpenGL", "ImGui"],
+                    description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis velit soluta rem, facere recusandae deserunt excepturi praesentium facilis. Saepe non accusamus adipisci hic voluptatem veniam, animi id minus qui in."
                 }
             ]
         };
