@@ -29,7 +29,7 @@ body::before {
   left: 0;
   width: 100%;
   height: 30px;
-  background-color: #0CC59E;
+  background-color: #0cb4c5;
 }
 
 body::after {
@@ -198,14 +198,40 @@ header .button, header .link {
 }
 
 .subtitle {
-  color: #afafaf;
+  color: #a3a3a3;
   font-weight: 300;
 }
 
 .contacts {
   position: fixed;
-  left: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  left: 20px;
   bottom: 10px;
+}
+
+.contacts .button {
+  margin: 10px 0px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  padding: 20px;
+}
+
+.contacts .button:hover {
+  background: #9c9c9c;
+}
+
+.contacts .button:hover i {
+  color: white;
+}
+
+.contacts .button i {
+  font-size: 18px;
 }
 
 #name {

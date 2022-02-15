@@ -1,7 +1,7 @@
 $container-width: 1000px
 
 $primary-font-color: #033B3D
-$secondary-font-color: rgb(175, 175, 175)
+$secondary-font-color: rgb(163, 163, 163)
 
 $secondary-bg-color: #9c9c9c
 
@@ -33,7 +33,7 @@ body
         left: 0
         width: 100% 
         height: $upper-height
-        background-color: #0CC59E
+        background-color: #0cb4c5
 
     &::after 
         z-index: -1
@@ -156,8 +156,22 @@ header
 
 .contacts 
     position: fixed
-    left: 0px
+    display: flex
+    flex-direction: column
+    left: 20px
     bottom: 10px
+    .button
+        margin: 10px 0px
+        transition: 0.3s
+        padding: 20px
+
+        &:hover
+            background: $secondary-bg-color
+            i
+                color: white
+
+        i
+            font-size: 18px
 
 #name 
     position: relative
