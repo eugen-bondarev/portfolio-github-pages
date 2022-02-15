@@ -44,6 +44,67 @@ const app = new Vue({
                     ],
                     techStack: ["Java", "maven", "OpenGL", "ImGui"],
                     description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis velit soluta rem, facere recusandae deserunt excepturi praesentium facilis. Saepe non accusamus adipisci hic voluptatem veniam, animi id minus qui in."
+                },                
+                {
+                    title: "Rechner von sehr großen Zahlen",
+                    links: [
+                        {
+                            cls: "fa-brands fa-github",
+                            href: "https://github.com/eugen-bondarev/real-long"
+                        }
+                    ],
+                    gallery: [
+                        "images/projects/real-long_0.png",
+                        "images/projects/real-long_1.png"
+                    ],
+                    techStack: ["C++", "CMake"],
+                    description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis velit soluta rem, facere recusandae deserunt excepturi praesentium facilis. Saepe non accusamus adipisci hic voluptatem veniam, animi id minus qui in."
+                },
+                {
+                    title: "Leistungsstarker 2D-Renderer, mit Vulkan implementiert",
+                    links: [
+                        {
+                            cls: "fa-brands fa-github",
+                            href: "https://github.com/eugen-bondarev/VulkanMapRenderer"
+                        }
+                    ],
+                    gallery: [
+                        "images/projects/MapRenderer_0.png",
+                        "images/projects/MapRenderer_1.png"
+                    ],
+                    techStack: ["C++", "CMake", "Vulkan", "ImGui"],
+                    description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis velit soluta rem, facere recusandae deserunt excepturi praesentium facilis. Saepe non accusamus adipisci hic voluptatem veniam, animi id minus qui in."
+                },
+                {
+                    title: "Ein kleines Sandbox-Spiel, mit OpenGL implementiert",
+                    links: [
+                        {
+                            cls: "fa-brands fa-github",
+                            href: "https://github.com/eugen-bondarev/VulkanMapRenderer"
+                        }
+                    ],
+                    gallery: [
+                        "images/projects/OpenGLGame_0.png",
+                        "images/projects/OpenGLGame_1.png"
+                    ],
+                    techStack: ["C++", "CMake", "OpenGL", "ImGui"],
+                    description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis velit soluta rem, facere recusandae deserunt excepturi praesentium facilis. Saepe non accusamus adipisci hic voluptatem veniam, animi id minus qui in."
+                },
+                {
+                    title: "Ein einfacher 3D-Renderer und 3D-Animation (Rigging)",
+                    links: [
+                        {
+                            cls: "fa-brands fa-github",
+                            href: "https://github.com/eugen-bondarev/VulkanMapRenderer"
+                        }
+                    ],
+                    gallery: [
+                        "images/projects/anima_0.mp4"
+                    ],
+                    videos: [
+                    ],
+                    techStack: ["C++", "CMake", "OpenGL", "ImGui"],
+                    description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis velit soluta rem, facere recusandae deserunt excepturi praesentium facilis. Saepe non accusamus adipisci hic voluptatem veniam, animi id minus qui in."
                 }
             ]
         };

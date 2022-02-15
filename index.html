@@ -62,7 +62,12 @@
                 </div>
                 <div class="description">
                     <div class="preview">
-                        <img v-for="image in project.gallery" :src="image" alt="">
+                        <div v-for="item in project.gallery">
+                            <img v-if="item.includes('png')" :src="item" alt="">
+                            <video v-else muted autoplay loop>
+                                <source :src="item" type="video/mp4">
+                            </video>
+                        </div>
                     </div>
                     <div class="text">
                         <h3 class="tech">

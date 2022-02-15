@@ -189,6 +189,10 @@ header .button, header .link {
   width: 300px;
 }
 
+.project .preview video, .project .preview img {
+  width: 300px;
+}
+
 .center {
   margin: auto;
 }
