@@ -46,6 +46,22 @@ const app = new Vue({
                 description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis velit soluta rem, facere recusandae deserunt excepturi praesentium facilis. Saepe non accusamus adipisci hic voluptatem veniam, animi id minus qui in."
             },
             {
+                title: "Snake KI, basierend auf den genetischen Algorithmen",
+                links: [
+                    {
+                        cls: "fa-brands fa-github",
+                        href: "https://github.com/eugen-bondarev/BLL"
+                    }
+                ],
+                gallery: [
+                    "images/projects/SnakeAI_1.mp4",
+                    "images/projects/SnakeAI_2.mp4",
+                    "images/projects/SnakeAI_0.png",
+                ],
+                techStack: ["C++", "CMake", "AI", "OpenGL", "ImGui"],
+                description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis velit soluta rem, facere recusandae deserunt excepturi praesentium facilis. Saepe non accusamus adipisci hic voluptatem veniam, animi id minus qui in."
+            },
+            {
                 title: "Eine App fürs Teilen von Dateien innerhalb eines WLAN-Netzes",
                 links: [
                     {

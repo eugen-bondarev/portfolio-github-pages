@@ -40,13 +40,13 @@
         </header>
         <div id="name" class="container center font-0">
             <h1>Eugen Bondarev</h1>
-            <h4 class="subtitle">Software-Entwickler</h4>
+            <h4 class="subtitle">Softwareentwickler</h4>
         </div>
         <div class="container center">
             <div class="menu">
                 <button @click="switchMode('projects', $event)" class="button menu--selected">Meine Projekte</button>
                 <button @click="switchMode('languages', $event)" class="button">Was ich beherrsche</button>
-                <button @click="switchMode('projects', $event)" class="button">Was mich fasziniert</button>
+                <button @click="switchMode('about', $event)" class="button">Über mich</button>
             </div>
             <transition name="fade">
                 <div v-if="state == 'projects'" class="projects">
@@ -63,7 +63,7 @@
                         </div>
                         <div class="description">
                             <div class="preview">
-                                <div v-for="item in project.gallery">
+                                <div class="media-wrapper" v-for="item in project.gallery">
                                     <img v-if="item.includes('png')" :src="item" alt="">
                                     <video v-else muted autoplay loop>
                                         <source :src="item" type="video/mp4">
@@ -82,50 +82,79 @@
                 </div>
             </transition>
             <transition name="fade">
-                <div v-if="state == 'languages'" class="languages">
+                <div v-if="state == 'languages'" class="languages text-align--center">
                     <div class="section">
-                        <h3 class="no-margin">Programmiersprachen: </h3>
-                        <div class="tech no-margin">
+                        <h2 class="no-margin">Sprachen</h2>
+                        <div class="tech flex flex--jcsb no-margin">
+                            <div class="tech__el">Deutsch</div>
+                            <div class="tech__el">Englisch</div>
+                            <div class="tech__el">Russisch</div>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <h2 class="no-margin">Programmiersprachen</h2>
+                        <div class="tech flex flex--jcsb no-margin">
                             <div class="tech__el">C++</div>
                             <div class="tech__el">Java</div>
+                            <div class="tech__el">JavaScript</div>
                             <div class="tech__el">Python</div>
                         </div>
                     </div>
                     <div class="section">
-                        <table>
-                            <tr>
-                                <th>Sprache</th>
-                                <th>Tools</th>
-                            </tr>
-                            <tr class="tech">
-                                <td>C++</td>
-                                <td>
-                                    <div class="tech__el">CMake</div>
-                                    <div class="tech__el">vcpkg</div>
-                                    <div class="tech__el">OpenGL</div>
-                                    <div class="tech__el">Vulkan</div>
-                                    <div class="tech__el">glfw3</div>
-                                    <div class="tech__el">ImGui</div>
-                                    <div class="tech__el">eigen</div>
-                                    <div class="tech__el">boost</div>
-                                </td>
-                            </tr>
-                            <tr class="tech">
-                                <td>Java</td>
-                                <td>
-                                    <div class="tech__el">Maven</div>
-                                    <div class="tech__el">Sockets</div>
-                                </td>
-                            </tr>
-                        </table>
-                        <!-- <h3 class="no-margin">Lieblingsbibliotheken:</h3>
-                        <div class="tech no-margin">
-                            <div class="tech__el">GLEW</div>
-                            <div class="tech__el">glfw3</div>
-                            <div class="tech__el">ImGui</div>
-                            <div class="tech__el">Java</div>
-                            <div class="tech__el">Python</div>
-                        </div> -->
+                        <div>
+                            <h2>Instrumente</h2>
+                            <table>
+                                <tr>
+                                    <th>Programmiersprache</th>
+                                    <th>Tools</th>
+                                </tr>
+                                <tr class="tech">
+                                    <td>C++</td>
+                                    <td class="tech__col">
+                                        <div class="tech__el">CMake</div>
+                                        <div class="tech__el">vcpkg</div>
+                                        <div class="tech__el">OpenGL</div>
+                                        <div class="tech__el">Vulkan</div>
+                                        <div class="tech__el">glfw3</div>
+                                        <div class="tech__el">ImGui</div>
+                                        <div class="tech__el">eigen</div>
+                                        <div class="tech__el">boost</div>
+                                    </td>
+                                </tr>
+                                <tr class="tech">
+                                    <td>Java</td>
+                                    <td class="tech__col">
+                                        <div class="tech__el">Maven</div>
+                                        <div class="tech__el">Sockets</div>
+                                        <div class="tech__el">OpenGL</div>
+                                    </td>
+                                </tr>
+                                <tr class="tech">
+                                    <td>JavaScript</td>
+                                    <td class="tech__col">
+                                        <div class="tech__el">Express</div>
+                                        <div class="tech__el">Node</div>
+                                        <div class="tech__el">Vue</div>
+                                        <div class="tech__el">jQuery</div>
+                                    </td>
+                                </tr>
+                                <tr class="tech">
+                                    <td>Python</td>
+                                    <td class="tech__col">
+                                        <div class="tech__el">NumPy</div>
+                                    </td>
+                                </tr>
+                                <tr class="tech">
+                                    <td>Sonstiges</td>
+                                    <td class="tech__col">
+                                        <div class="tech__el">git</div>
+                                        <div class="tech__el">HTML</div>
+                                        <div class="tech__el">CSS</div>
+                                        <div class="tech__el">SASS</div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </transition>

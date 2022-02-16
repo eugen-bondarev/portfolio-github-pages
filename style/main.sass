@@ -5,6 +5,8 @@ $secondary-font-color: rgb(163, 163, 163)
 
 $secondary-bg-color: #9c9c9c
 
+$light-grey: lighten(black, 90%)
+
 $upper-height: 30px
 
 *
@@ -62,6 +64,7 @@ body
     margin-bottom: 50px
     height: 50px
     .button
+        background: transparent
         text-transform: uppercase
         padding: 0
         font-size: 1.2em
@@ -86,7 +89,7 @@ body
         h2
             font-weight: 300
     .menu--selected
-        font-size: 1.2em
+        font-size: 1.4em
         &::after
             content: ""
             position: absolute
@@ -135,12 +138,10 @@ header
 
 .project 
     padding: 20px
-    margin-bottom: 20px
+    margin-bottom: 30px
     transition: 0.3s
-    border: 2px solid transparent
-
-    &:hover
-        border: 2px solid #033B3D
+    border: 2px solid $light-grey
+    border-radius: 20px
     
     &__name
         position: relative
@@ -160,10 +161,10 @@ header
                 margin-left: 1px
                 transition: 0.3s
             transition: 0.3s
-            &:hover
-                i
-                    color: white
-                background-color: #9c9c9c
+            // &:hover
+            //     i
+            //         color: white
+            //     background-color: #9c9c9c
         
         &::after
             content: ""
@@ -172,7 +173,7 @@ header
             bottom: 0px
             width: 100%
             height: 2px
-            background-color: black
+            background-color: $light-grey
     
     .description
         margin-top: 20px
@@ -190,13 +191,26 @@ header
                     display: inline
                     margin-left: 5px
     .preview
-        width: 300px
-        video, img
+        max-width: 300px
+        .media-wrapper
+            display: flex
+            height: 300px
+            margin: auto
+            align-items: center
             width: 300px
+        video, img
+            width: 100%
+            height: auto
+            // height: auto
 
-            
+.text-align--center
+    text-align: center
+
+.flex
+    &--jcsb
+        justify-content: space-between
+
 .tech
-    margin-bottom: 20px
     &__el
         cursor: default
         font-weight: 400
@@ -208,18 +222,29 @@ header
 
 .languages
     .section
-        margin-bottom: 20px
+        h2
+            margin: 20px 0px
+        margin: 50px 0px
         .tech
-            margin: 0
+            margin: auto
+            width: 500px
         table
-            td
+            overflow: hidden
+            border: 2px solid $light-grey
+            border-radius: 20px
+            margin: auto
+            width: 100%
+            tr
+                &:nth-child(2n + 2)
+                    background-color: #f8f8f8
+            td, th
                 padding: 20px
-                border: 1px solid $primary-font-color
+                &.tech__col
+                    display: flex
+                    flex-wrap: wrap
             .tech__el
                 display: block
                 margin-bottom: 5px
-        display: flex
-        align-items: center
 
 .center
     margin: auto
@@ -238,7 +263,7 @@ header
         margin: 10px 0px
         transition: 0.3s
         padding: 20px
-
+        background: transparent
         &:hover
             background: $secondary-bg-color
             i
