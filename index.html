@@ -13,6 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Work+Sans:wght@300;400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;900&display=swap" rel="stylesheet">
 
+    <link href="https://fonts.googleapis.com/css2?family=Heebo&display=swap" rel="stylesheet">
+
     <script src="https://kit.fontawesome.com/d6cf7c96ee.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" type="text/javascript"></script>
@@ -26,16 +28,20 @@
     <div id="app">
         <div class="contacts">
             <a href="https://github.com/eugen-bondarev" target="_blank" class="button"><i class="fa-brands fa-github"></i></a>
-            <a class="button"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.instagram.com/bondareveugen" target="_blank" class="button"><i class="fa-brands fa-instagram"></i></a>
             <a href="mailto:eug.bondarev@gmail.com" class="button"><i class="fa-solid fa-envelope"></i></a>
         </div>
         <header class="flex center container">
             <div>
             </div>
-            <div>
-                <button class="button">
+            <div class="tooltip-parent">
+                <button @click="contact" class="email-tooltip__button button">
                     Kontaktieren
                 </button>
+                <div class="email-tooltip">
+                    eug.bondarev@gmail.com 
+                    <button @click="copyEmail($event)"><i class="fa-xl fa-regular fa-clipboard"></i></button>
+                </div>
             </div>
         </header>
         <div id="name" class="container center font-0">
@@ -46,7 +52,6 @@
             <div class="menu">
                 <button @click="switchMode('projects', $event)" class="button menu--selected">Meine Projekte</button>
                 <button @click="switchMode('languages', $event)" class="button">Was ich beherrsche</button>
-                <button @click="switchMode('about', $event)" class="button">Über mich</button>
             </div>
             <transition name="fade">
                 <div v-if="state == 'projects'" class="projects">
@@ -82,27 +87,10 @@
                 </div>
             </transition>
             <transition name="fade">
-                <div v-if="state == 'languages'" class="languages text-align--center">
-                    <div class="section">
-                        <h2 class="no-margin">Sprachen</h2>
-                        <div class="tech flex flex--jcsb no-margin">
-                            <div class="tech__el">Deutsch</div>
-                            <div class="tech__el">Englisch</div>
-                            <div class="tech__el">Russisch</div>
-                        </div>
-                    </div>
-                    <div class="section">
-                        <h2 class="no-margin">Programmiersprachen</h2>
-                        <div class="tech flex flex--jcsb no-margin">
-                            <div class="tech__el">C++</div>
-                            <div class="tech__el">Java</div>
-                            <div class="tech__el">JavaScript</div>
-                            <div class="tech__el">Python</div>
-                        </div>
-                    </div>
-                    <div class="section">
+                <div v-if="state == 'languages'" class="languages">
+                    <div class="section text-align--center">
                         <div>
-                            <h2>Instrumente</h2>
+                            <h2>Programmiersprachen & Bibliotheken</h2>
                             <table>
                                 <tr>
                                     <th>Programmiersprache</th>
@@ -154,6 +142,14 @@
                                     </td>
                                 </tr>
                             </table>
+                        </div>
+                    </div>
+                    <div class="section text-align--center">
+                        <h2 class="no-margin">Sprachen</h2>
+                        <div class="tech flex flex--jcsb no-margin">
+                            <div class="tech__el">Deutsch</div>
+                            <div class="tech__el">Englisch</div>
+                            <div class="tech__el">Russisch</div>
                         </div>
                     </div>
                 </div>

@@ -5,10 +5,21 @@ function applySliders() {
     });
 }
 
+function copyToClipboard(text) {
+    navigator.clipboard.writeText(text);
+}
+
 const app = new Vue({
     el: "#app",
     mounted() {
         applySliders();
+
+        $(window).click(function(event) {            
+            var $target = $(event.target);
+            if(!$target.closest('.email-tooltip').length && $target[0] !== $(".email-tooltip__button")[0] && $('.email-tooltip').hasClass("email-tooltip--open")) {
+                $('.email-tooltip').removeClass("email-tooltip--open");
+            }
+        });
     },
     updated() {
         if (this.state == "projects") {
@@ -16,6 +27,17 @@ const app = new Vue({
         }
     },
     methods: {
+        copyEmail(event) {
+            const b = event.target.closest(".email-tooltip");
+            $(b).addClass("email-tooltip--ok");
+            setTimeout(function() {
+                $(b).removeClass("email-tooltip--ok");
+            }, 500);
+            copyToClipboard("eug.bondarev@gmail.com")
+        },
+        contact() {
+            $(".email-tooltip").toggleClass("email-tooltip--open");
+        },
         switchMode(mode, e) {
             $(".menu--selected").removeClass("menu--selected");
             $(e.target).addClass("menu--selected");
@@ -73,7 +95,7 @@ const app = new Vue({
                     "images/projects/homeNetShare_0.png",
                     "images/projects/homeNetShare_1.png"
                 ],
-                techStack: ["Java", "maven", "OpenGL", "ImGui"],
+                techStack: ["Java", "Maven", "OpenGL", "ImGui"],
                 description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis velit soluta rem, facere recusandae deserunt excepturi praesentium facilis. Saepe non accusamus adipisci hic voluptatem veniam, animi id minus qui in."
             },                
             {
