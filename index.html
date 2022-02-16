@@ -27,15 +27,21 @@
 <body>
     <div id="app">
         <div class="contacts">
-            <a href="https://github.com/eugen-bondarev" target="_blank" class="button"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.instagram.com/bondareveugen" target="_blank" class="button"><i class="fa-brands fa-instagram"></i></a>
-            <a href="mailto:eug.bondarev@gmail.com" class="button"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://github.com/eugen-bondarev" target="_blank" class="button button--round">
+                <i class="fa-xl fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.instagram.com/bondareveugen" target="_blank" class="button button--round">
+                <i class="fa-xl fa-brands fa-instagram"></i>
+            </a>
+            <a href="mailto:eug.bondarev@gmail.com" class="button button--round">
+                <i class="fa-xl fa-solid fa-envelope"></i>
+            </a>
         </div>
         <header class="flex center container">
             <div>
             </div>
             <div class="tooltip-parent">
-                <button @click="contact" class="email-tooltip__button button">
+                <button @click="contact" class="contact-button color--dark email-tooltip__button button">
                     Kontaktieren
                 </button>
                 <div class="email-tooltip">
@@ -45,8 +51,8 @@
             </div>
         </header>
         <div id="name" class="container center font-0">
-            <h1>Eugen Bondarev</h1>
-            <h4 class="subtitle">Softwareentwickler</h4>
+            <h1 class="text-transform--uppercase">Eugen Bondarev</h1>
+            <h4 class="text-transform--uppercase subtitle">Softwareentwickler</h4>
         </div>
         <div class="container center">
             <div class="menu">
@@ -55,13 +61,13 @@
             </div>
             <transition name="fade">
                 <div v-if="state == 'projects'" class="projects">
-                    <div class="project" v-for="project in projects">
+                    <div class="project section-with-border" v-for="project in projects">
                         <div class="project__name">
                             <h3 class="no-margin">
                                 {{ project.title }}
                             </h3>
-                            <div>
-                                <a v-for="link in project.links" :href="link.href" target="_blank" class="button">
+                            <div class="flex">
+                                <a v-for="link in project.links" :href="link.href" target="_blank" class="project__button button--no-background button button--round">
                                     <i class="fa-xl" :class="link.cls"></i>
                                 </a>
                             </div>
@@ -80,7 +86,8 @@
                                     Tech-Stack:
                                     <div v-for="item in project.techStack" class="tech__el">{{ item }}</div>
                                 </h3>
-                                {{ project.description }}
+                                <p v-html="project.description">
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -90,8 +97,8 @@
                 <div v-if="state == 'languages'" class="languages">
                     <div class="section text-align--center">
                         <div>
-                            <h2>Programmiersprachen & Bibliotheken</h2>
-                            <table>
+                            <h2>Programmiersprachen & Instrumente</h2>
+                            <table class="section-with-border">
                                 <tr>
                                     <th>Programmiersprache</th>
                                     <th>Tools</th>

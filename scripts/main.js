@@ -64,8 +64,14 @@ const app = new Vue({
                     "images/projects/bll_0.png",
                     "images/projects/bll_2.png",
                 ],
-                techStack: ["C++", "vcpkg", "CMake", "eigen", "OpenGL", "ImGui"],
-                description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis velit soluta rem, facere recusandae deserunt excepturi praesentium facilis. Saepe non accusamus adipisci hic voluptatem veniam, animi id minus qui in."
+                techStack: ["C++", "vcpkg", "CMake", "AI", "eigen", "OpenGL", "ImGui"],
+                description: `
+                    Meine besondere Lernleistung im Rahmen des Abiturs 2022, die sich mit dem Thema beschäftigt „Modellierung und Implementierung künstlicher
+                    neuronaler Netze am Beispiel von Erkennung handgeschriebener Ziffern mit Hilfe von C++“.
+                    <br>
+                    <br>
+                    Hier habe ich ein neuronales Netzwerk auf C++ implementiert, es mit dem MNIST-Datensatz trainiert und seine Leistung mit der von Michael Nielsen verglichen.
+                `
             },
             {
                 title: "Snake KI, basierend auf den genetischen Algorithmen",
@@ -81,7 +87,18 @@ const app = new Vue({
                     "images/projects/SnakeAI_0.png",
                 ],
                 techStack: ["C++", "CMake", "AI", "OpenGL", "ImGui"],
-                description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis velit soluta rem, facere recusandae deserunt excepturi praesentium facilis. Saepe non accusamus adipisci hic voluptatem veniam, animi id minus qui in."
+                description: `
+                    Ein Programm, dass sehr viele Snake-Spiele simuliert, die sich anfangs zufällig verhalten, fangen aber allmählich an, intelligentes Verhalten aufzuweisen.
+                    Es werden hierbei die genetischen Algorithmen benutzt, mit deren Hilfe folgende Prozesse stattfinden:
+                    <ul>
+                        <li>Die besten Genome werden ausgewählt.</li>
+                        <li>Diese produzieren Nachkommen miteinander.</li>
+                        <ul>
+                            <li>Die „Kinder“ übernehmen dabei einige Gene von den beiden Elternteilen.</li>
+                            <li>Es können zufällige Mutationen stattfinden.</li>
+                        </ul>
+                    </ul>
+                `
             },
             {
                 title: "Eine App fürs Teilen von Dateien innerhalb eines WLAN-Netzes",
@@ -96,7 +113,9 @@ const app = new Vue({
                     "images/projects/homeNetShare_1.png"
                 ],
                 techStack: ["Java", "Maven", "OpenGL", "ImGui"],
-                description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis velit soluta rem, facere recusandae deserunt excepturi praesentium facilis. Saepe non accusamus adipisci hic voluptatem veniam, animi id minus qui in."
+                description: `
+                    Dieses Programm stellt eine Client/Server-Verbindung her, um mit deren Hilfe Dateien mittels WLAN zu übertragen.
+                `
             },                
             {
                 title: "Rechner von sehr großen Zahlen",
@@ -111,7 +130,13 @@ const app = new Vue({
                     "images/projects/real-long_1.png"
                 ],
                 techStack: ["C++", "CMake"],
-                description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis velit soluta rem, facere recusandae deserunt excepturi praesentium facilis. Saepe non accusamus adipisci hic voluptatem veniam, animi id minus qui in."
+                description: `
+                    Dieses Programm ist durch dieses <a href="https://youtu.be/ujHHlJzcadE">Mathe-Video</a> inspiriert, das sich mit der Frage auseinandersetzt, was größer ist, 55^99 oder 99!
+                    <br>
+                    Da die Rechnung von solch großen Zahlen in den berühmten Programmiersprachen nicht out of the box implementiert ist, habe ich mich dafür entschieden, diesen Rechner in C++ zu verwircklichen.
+                    <br>
+                    Er ist in der Lage, die mathematischen Operatoren +, -, *, /, pow und factorial auf Zahlen beliebiger Größe anzuwenden.
+                `
             },
             {
                 title: "Leistungsstarker 2D-Renderer, mit Vulkan implementiert",
@@ -126,7 +151,11 @@ const app = new Vue({
                     "images/projects/MapRenderer_1.png"
                 ],
                 techStack: ["C++", "CMake", "Vulkan", "ImGui"],
-                description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis velit soluta rem, facere recusandae deserunt excepturi praesentium facilis. Saepe non accusamus adipisci hic voluptatem veniam, animi id minus qui in."
+                description: `
+                    Dieser Renderer utilisiert das sogenannte Instanced-Rendering. 
+                    <br>
+                    Es werden gleichzeitig ungefähr 9000 Blocks gerendert, was beim „normalen“ Rendern aufgrund der vielen Funktionsaufrufe des Grafik-API (in dem Falle Vulkan) äußerst leistungsschwach wäre.
+                `
             },
             {
                 title: "Ein kleines Sandbox-Spiel, mit OpenGL implementiert",
@@ -141,7 +170,13 @@ const app = new Vue({
                     "images/projects/OpenGLGame_1.png"
                 ],
                 techStack: ["C++", "CMake", "OpenGL", "ImGui"],
-                description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis velit soluta rem, facere recusandae deserunt excepturi praesentium facilis. Saepe non accusamus adipisci hic voluptatem veniam, animi id minus qui in."
+                description: `
+                    Für dieses kleine Spiel habe ich von OpenGL bentzt. Das Spiel utilisiert Instanced-Rendering, um die riesige Karte zu rendern.
+                    <br>
+                    Die Grafik und Machaniken ähneln sich Terraria.
+                    <br>
+                    Die Karte ist allerdings unendlich, dafür benutzte ich Perlin-Noise (wie in Minecraft).
+                    `
             },
             {
                 title: "Ein einfacher 3D-Renderer und 3D-Animation (Rigging)",

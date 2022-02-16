@@ -1,6 +1,6 @@
 * {
   font-family: 'Work Sans', sans-serif;
-  color: #033B3D;
+  color: #f1eff8;
 }
 
 .fade-enter-active, .fade-leave-active {
@@ -16,42 +16,77 @@
   margin: 0;
 }
 
+.button, .link {
+  cursor: pointer;
+  font-size: 14px;
+  border: none;
+}
+
+.button {
+  padding: 10px 20px;
+  background: #f1eff8;
+  padding: 10px 20px;
+  border-radius: 100px;
+  text-decoration: none;
+}
+
+.link {
+  padding: 5px 0px;
+  position: relative;
+  background: transparent;
+  color: #f1eff8;
+}
+
+.link::after {
+  content: "";
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 0;
+  height: 2px;
+  background-color: #f1eff8;
+}
+
+.link:hover::after {
+  width: 100%;
+}
+
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   margin-bottom: 10px;
 }
 
+.color--dark {
+  color: #222125;
+}
+
+.contact-button {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.contact-button:hover, .contact-button:active, .contact-button:focus {
+  background-color: #db4a07;
+  color: white;
+  -webkit-box-shadow: 2px 2px 10px black;
+          box-shadow: 2px 2px 10px black;
+}
+
 .container {
-  width: 1000px;
+  width: 900px;
+}
+
+.text-transform--uppercase {
+  text-transform: uppercase;
 }
 
 body {
+  background-color: #222125;
   margin: 0;
   min-height: 100vh;
   padding-bottom: 100px;
-}
-
-body::before {
-  z-index: -1;
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 30px;
-  background-color: #0cb4c5;
-}
-
-body::after {
-  z-index: -1;
-  content: "";
-  position: absolute;
-  top: 20px;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url(../images/background.png);
-  background-repeat: no-repeat;
 }
 
 .tooltip-parent {
@@ -69,8 +104,8 @@ body::after {
   left: -50px;
   top: 44px;
   padding: 10px;
-  background-color: #033B3D;
-  color: white;
+  background-color: #f1eff8;
+  color: #222125;
   border-radius: 7px;
   opacity: 0;
   -webkit-transition: 0.3s;
@@ -78,14 +113,25 @@ body::after {
 }
 
 .email-tooltip--ok button {
-  background: #08bb3e !important;
+  background: #db4a07 !important;
 }
 
 .email-tooltip--ok button i {
-  color: white !important;
+  color: #f1eff8 !important;
 }
 
 .email-tooltip button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 36px;
+  height: 36px;
   margin-left: 8px;
   background: transparent;
   border: none;
@@ -97,15 +143,15 @@ body::after {
 }
 
 .email-tooltip button:hover {
-  background: white;
+  background: #222125;
 }
 
 .email-tooltip button:hover i {
-  color: #033B3D;
+  color: #f1eff8;
 }
 
 .email-tooltip button i {
-  color: white;
+  color: #222125;
 }
 
 .email-tooltip--open {
@@ -120,7 +166,7 @@ body::after {
   height: 10px;
   top: -5px;
   left: 50%;
-  background-color: #033B3D;
+  background-color: #f1eff8;
   -webkit-transform: rotateZ(45deg);
           transform: rotateZ(45deg);
 }
@@ -146,7 +192,6 @@ body::after {
 
 .menu .button {
   background: transparent;
-  text-transform: uppercase;
   padding: 0;
   font-size: 1.2em;
   margin-right: 20px;
@@ -158,14 +203,15 @@ body::after {
 .menu .button::after {
   content: "";
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: -15px;
+  left: 50%;
   width: 0;
   height: 2px;
   display: block;
-  background: #033B3D;
+  background: #f1eff8;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  opacity: 0;
 }
 
 .menu .button:hover {
@@ -173,6 +219,9 @@ body::after {
 }
 
 .menu .button:hover::after {
+  bottom: 0;
+  opacity: 1;
+  left: 0;
   width: 100%;
 }
 
@@ -192,7 +241,8 @@ body::after {
   width: 100%;
   height: 2px;
   display: block;
-  background: #033B3D;
+  background: #f1eff8;
+  opacity: 1;
 }
 
 header {
@@ -203,50 +253,27 @@ header .button, header .link {
   margin-left: 20px;
 }
 
-.button, .link {
-  cursor: pointer;
-  font-size: 14px;
-  border: none;
-}
-
-.button {
-  padding: 10px 20px;
-  background: white;
-  padding: 10px 20px;
-  border-radius: 100px;
-  text-decoration: none;
-}
-
-.link {
-  padding: 5px 0px;
-  position: relative;
-  background: transparent;
-  color: white;
-}
-
-.link::after {
-  content: "";
+.section-with-border {
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  position: absolute;
-  left: 0px;
-  bottom: 0px;
-  width: 0;
-  height: 2px;
-  background-color: white;
+  border: 2px solid rgba(230, 230, 230, 0.2);
 }
 
-.link:hover::after {
-  width: 100%;
+.section-with-border:hover {
+  border-color: #e6e6e6;
 }
 
 .project {
   padding: 20px;
   margin-bottom: 30px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  border: 2px solid #e6e6e6;
-  border-radius: 20px;
+}
+
+.project:hover .project__name::after {
+  background-color: #e6e6e6;
+}
+
+.project__button {
+  margin-left: 10px;
 }
 
 .project__name {
@@ -264,6 +291,7 @@ header .button, header .link {
 }
 
 .project__name a.button {
+  background: transparent;
   display: inline-block;
   text-align: center;
   width: 25px;
@@ -284,11 +312,13 @@ header .button, header .link {
 .project__name::after {
   content: "";
   position: absolute;
-  left: 0px;
+  left: -20px;
   bottom: 0px;
-  width: 100%;
+  width: calc(100% + 40px);
   height: 2px;
-  background-color: #e6e6e6;
+  background-color: rgba(230, 230, 230, 0.2);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .project .description {
@@ -302,14 +332,28 @@ header .button, header .link {
   margin-left: 20px;
 }
 
+.project .description .text p {
+  line-height: 1.5;
+  text-align: justify;
+}
+
 .project .description .text .tech {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-bottom: 20px;
 }
 
 .project .description .text .tech__el {
-  cursor: default;
-  font-weight: 400;
-  background-color: #e5e5e5;
+  margin-top: 3px;
   padding: 2px 10px;
   border-radius: 4px;
   display: inline;
@@ -324,11 +368,14 @@ header .button, header .link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 300px;
   margin: auto;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 300px;
   width: 300px;
 }
 
@@ -350,7 +397,7 @@ header .button, header .link {
 .tech__el {
   cursor: default;
   font-weight: 400;
-  background-color: #e5e5e5;
+  background-color: #4b4b4b;
   padding: 2px 10px;
   border-radius: 4px;
   display: inline;
@@ -372,14 +419,12 @@ header .button, header .link {
 
 .languages .section table {
   overflow: hidden;
-  border: 2px solid #e6e6e6;
-  border-radius: 20px;
   margin: auto;
   width: 100%;
 }
 
 .languages .section table tr:nth-child(2n + 2) {
-  background-color: #f8f8f8;
+  background-color: #29282d;
 }
 
 .languages .section table td, .languages .section table th {
@@ -417,28 +462,48 @@ header .button, header .link {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  left: 20px;
-  bottom: 10px;
+  left: 30px;
+  bottom: 30px;
 }
 
 .contacts .button {
-  margin: 10px 0px;
+  margin-top: 10px;
+}
+
+.button--round {
+  background: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 48px;
+  height: 48px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  padding: 20px;
-  background: transparent;
+  padding: 10px;
 }
 
-.contacts .button:hover {
-  background: #9c9c9c;
+.button--round:not(.button--no-background):hover {
+  background: #f1eff8;
 }
 
-.contacts .button:hover i {
-  color: white;
+.button--round:not(.button--no-background):hover i {
+  color: #db4a07;
 }
 
-.contacts .button i {
-  font-size: 18px;
+.button--round i {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  font-size: 36px;
+}
+
+.button--round:hover i {
+  color: #db4a07;
 }
 
 #name {
