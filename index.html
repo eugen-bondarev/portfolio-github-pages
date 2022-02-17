@@ -26,22 +26,22 @@
 </head>
 <body class="hide">
     <div id="app">
-        <div class="contacts">
-            <button @click="toggleTheme()" class="button button--round">
-                <i v-if="!darkTheme" class="fa-xl fa-solid fa-moon"></i>
-                <i v-else class="fa-xl fa-solid fa-sun"></i>
-            </button>
-            <a href="https://github.com/eugen-bondarev" target="_blank" class="button button--round">
-                <i class="fa-xl fa-brands fa-github"></i>
-            </a>
-            <a href="https://www.instagram.com/bondareveugen" target="_blank" class="button button--round">
-                <i class="fa-xl fa-brands fa-instagram"></i>
-            </a>
-            <a href="mailto:eug.bondarev@gmail.com" class="button button--round">
-                <i class="fa-xl fa-solid fa-envelope"></i>
-            </a>
-        </div>
-        <header class="flex center container">
+        <header class="flex flex--aic center container">
+            <div class="contacts">
+                <button @click="toggleTheme()" class="button button--round">
+                    <i v-if="!darkTheme" class="fa-xl fa-solid fa-moon"></i>
+                    <i v-else class="fa-xl fa-solid fa-sun"></i>
+                </button>
+                <a href="https://github.com/eugen-bondarev" target="_blank" class="button button--round">
+                    <i class="fa-xl fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.instagram.com/bondareveugen" target="_blank" class="button button--round">
+                    <i class="fa-xl fa-brands fa-instagram"></i>
+                </a>
+                <a href="mailto:eug.bondarev@gmail.com" class="button button--round">
+                    <i class="fa-xl fa-solid fa-envelope"></i>
+                </a>
+            </div>
             <div>
             </div>
             <div class="tooltip-parent">
@@ -120,7 +120,7 @@
                                 </tr>
                                 <tr class="tech">
                                     <td>C++</td>
-                                    <td class="tech__col">
+                                    <td class="tech__col flex--jcsa">
                                         <div class="tech__el">CMake</div>
                                         <div class="tech__el">vcpkg</div>
                                         <div class="tech__el">OpenGL</div>
@@ -133,7 +133,7 @@
                                 </tr>
                                 <tr class="tech">
                                     <td>Java</td>
-                                    <td class="tech__col">
+                                    <td class="tech__col flex--jcsa">
                                         <div class="tech__el">Maven</div>
                                         <div class="tech__el">Sockets</div>
                                         <div class="tech__el">OpenGL</div>
@@ -141,7 +141,7 @@
                                 </tr>
                                 <tr class="tech">
                                     <td>JavaScript</td>
-                                    <td class="tech__col">
+                                    <td class="tech__col flex--jcsa">
                                         <div class="tech__el">Express</div>
                                         <div class="tech__el">Node</div>
                                         <div class="tech__el">Vue</div>
@@ -150,13 +150,13 @@
                                 </tr>
                                 <tr class="tech">
                                     <td>Python</td>
-                                    <td class="tech__col">
+                                    <td class="tech__col flex--jcsa">
                                         <div class="tech__el">NumPy</div>
                                     </td>
                                 </tr>
                                 <tr class="tech">
                                     <td>Sonstiges</td>
-                                    <td class="tech__col">
+                                    <td class="tech__col flex--jcsa">
                                         <div class="tech__el">git</div>
                                         <div class="tech__el">HTML</div>
                                         <div class="tech__el">CSS</div>
@@ -168,7 +168,7 @@
                     </div>
                     <div class="section text-align--center">
                         <h2 class="no-margin">Editoren</h2>
-                        <div class="tech flex flex--jcsb no-margin">
+                        <div class="tech flex flex--jcsa no-margin">
                             <div class="tech__el">VS Code</div>
                             <div class="tech__el">Visual Studio</div>
                             <div class="tech__el">IntelliJ</div>
@@ -177,7 +177,7 @@
                     </div>
                     <div class="section text-align--center">
                         <h2 class="no-margin">Sprachen</h2>
-                        <div class="tech flex flex--jcsb no-margin">
+                        <div class="tech flex flex--jcsa no-margin">
                             <div class="tech__el">Deutsch</div>
                             <div class="tech__el">Englisch</div>
                             <div class="tech__el">Russisch</div>

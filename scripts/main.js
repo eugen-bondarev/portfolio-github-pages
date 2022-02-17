@@ -99,7 +99,7 @@ function initVue() {
                     links: [
                         {
                             cls: "fa-brands fa-github",
-                            href: "https://github.com/eugen-bondarev/BLL"
+                            href: "https://github.com/eugen-bondarev/SnakeAI"
                         }
                     ],
                     gallery: [

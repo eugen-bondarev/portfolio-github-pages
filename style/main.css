@@ -30,7 +30,11 @@
     border-bottom-width: 0px;
   }
   .contacts {
-    display: none !important;
+    position: relative;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
   .container {
     width: 100%;
@@ -40,6 +44,9 @@
   }
   .center {
     margin: auto;
+  }
+  .button--round > i {
+    font-size: 24px;
   }
   .email-tooltip {
     left: -135px;
@@ -83,9 +90,19 @@
     border-width: 2px;
   }
   .contacts {
+    position: fixed;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    left: 30px;
+    bottom: 30px;
+  }
+  .contacts .button {
+    margin-top: 10px;
   }
   .container {
     width: 900px;
@@ -95,6 +112,9 @@
   }
   .center {
     margin: auto;
+  }
+  .button--round > i {
+    font-size: 36px;
   }
   .email-tooltip {
     left: -72px;
@@ -112,6 +132,9 @@
   }
   .project .description {
     margin-top: 20px;
+  }
+  .languages > .section > .tech {
+    width: 500px;
   }
 }
 
@@ -482,6 +505,12 @@ body:not(.theme--dark) .email-tooltip::before {
           justify-content: center;
 }
 
+.flex--aic {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .project {
   padding: 20px;
 }
@@ -619,7 +648,6 @@ body:not(.theme--dark) .email-tooltip::before {
   border-radius: 4px;
   display: inline;
   margin-top: 3px;
-  margin-left: 5px;
 }
 
 .languages .section {
@@ -632,7 +660,6 @@ body:not(.theme--dark) .email-tooltip::before {
 
 .languages .section .tech {
   margin: auto;
-  width: 500px;
 }
 
 .languages .section table {
@@ -664,20 +691,9 @@ body:not(.theme--dark) .email-tooltip::before {
 }
 
 .contacts {
-  position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  left: 30px;
-  bottom: 30px;
-}
-
-.contacts .button {
-  margin-top: 10px;
 }
 
 .button--round {
@@ -711,7 +727,6 @@ body:not(.theme--dark) .email-tooltip::before {
 .button--round i {
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  font-size: 36px;
 }
 
 .button--round:hover i {

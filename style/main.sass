@@ -38,13 +38,18 @@ $upper-height: 30px
         border-right-width: 0px
         border-bottom-width: 0px
     .contacts
-        display: none !important
+        position: relative
+        flex-direction: row
+        // top: 0px
+        // left: 0px
     .container 
         width: 100%
     header
         padding: 10px
     .center
         margin: auto
+    .button--round > i
+        font-size: 24px
     .email-tooltip
         left: -135px
         top: 44px
@@ -71,13 +76,21 @@ $upper-height: 30px
     .section-with-border
         border-width: 2px
     .contacts
+        position: fixed
         display: flex
+        flex-direction: column
+        left: 30px
+        bottom: 30px
+        .button            
+            margin-top: 10px
     .container 
         width: $container-width
     header 
         padding: 30px 0
     .center
         margin: auto
+    .button--round > i
+        font-size: 36px
     .email-tooltip
         left: -72px
         top: 44px
@@ -90,6 +103,8 @@ $upper-height: 30px
             display: block
         .description            
             margin-top: 20px
+    .languages > .section > .tech
+        width: 500px
 
 body
     transition: 0.3s
@@ -336,6 +351,9 @@ body:not(.theme--dark)
 .flex--jcc
     justify-content: center
 
+.flex--aic
+    align-items: center
+
 .project 
     padding: 20px
     &__button
@@ -415,7 +433,7 @@ body:not(.theme--dark)
         border-radius: 4px
         display: inline
         margin-top: 3px
-        margin-left: 5px
+        // margin-left: 5px
 
 .languages
     .section
@@ -424,7 +442,6 @@ body:not(.theme--dark)
         margin: 50px 0px
         .tech
             margin: auto
-            width: 500px
         table
             overflow: hidden
             margin: auto
@@ -443,13 +460,7 @@ body:not(.theme--dark)
     font-weight: 300
 
 .contacts
-    position: fixed
     display: flex
-    flex-direction: column
-    left: 30px
-    bottom: 30px
-    .button
-        margin-top: 10px
 
 .button--round
     background: transparent
@@ -468,7 +479,6 @@ body:not(.theme--dark)
     padding: 10px
     i
         transition: 0.3s
-        font-size: 36px
     &:hover
         i
             color: $active-color
