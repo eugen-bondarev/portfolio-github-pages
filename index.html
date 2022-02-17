@@ -24,7 +24,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 </head>
-<!-- <body class="theme--dark"> -->
 <body class="hide">
     <div id="app">
         <div class="contacts">
@@ -101,6 +100,17 @@
             <transition name="fade">
                 <div v-if="state == 'languages'" class="languages">
                     <div class="section text-align--center">
+                        <h2 class="no-margin">Meine Interessengebiete</h2>
+                        <div class="tech flex flex--wrap flex--jcsa no-margin">
+                            <div class="tech__el">2D/3D-Grafik</div>
+                            <div class="tech__el">KI</div>
+                            <div class="tech__el">Automatisierung</div>
+                            <div class="tech__el">Entwicklertools</div>
+                            <div class="tech__el">Desktop-Anwendungen</div>
+                            <div class="tech__el">Web-Anwendungen</div>
+                        </div>
+                    </div>
+                    <div class="section text-align--center">
                         <div>
                             <h2>Programmiersprachen & Instrumente</h2>
                             <table class="section-with-border">
@@ -154,6 +164,15 @@
                                     </td>
                                 </tr>
                             </table>
+                        </div>
+                    </div>
+                    <div class="section text-align--center">
+                        <h2 class="no-margin">Editoren</h2>
+                        <div class="tech flex flex--jcsb no-margin">
+                            <div class="tech__el">VS Code</div>
+                            <div class="tech__el">Visual Studio</div>
+                            <div class="tech__el">IntelliJ</div>
+                            <div class="tech__el">Eclipse</div>
                         </div>
                     </div>
                     <div class="section text-align--center">
