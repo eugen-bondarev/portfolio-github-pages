@@ -549,6 +549,7 @@ body:not(.theme--dark) .email-tooltip::before {
   margin-left: 1px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  font-size: 24px;
 }
 
 .project__name::after {

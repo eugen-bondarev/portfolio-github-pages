@@ -74,6 +74,10 @@ function initVue() {
                             href: "materials/BLL_Eugen_Bondarev.pdf"
                         },
                         {
+                            cls: "fa-solid fa-download",
+                            href: "https://github.com/eugen-bondarev/BLL/releases/download/v1.0.2/BLL.zip"
+                        },
+                        {
                             cls: "fa-brands fa-github",
                             href: "https://github.com/eugen-bondarev/BLL"
                         }
@@ -97,6 +101,10 @@ function initVue() {
                 {
                     title: "Snake KI, basierend auf den genetischen Algorithmen",
                     links: [
+                        {
+                            cls: "fa-solid fa-download",
+                            href: "https://github.com/eugen-bondarev/SnakeAI/releases/download/v1.0.0/SnakeAI.zip"
+                        },
                         {
                             cls: "fa-brands fa-github",
                             href: "https://github.com/eugen-bondarev/SnakeAI"
@@ -125,6 +133,10 @@ function initVue() {
                     title: "Eine App fürs Teilen von Dateien innerhalb eines WLAN-Netzes",
                     links: [
                         {
+                            cls: "fa-solid fa-download",
+                            href: "https://github.com/eugen-bondarev/homeNetShare/releases/download/v1.0.0/homeNetShare.zip"
+                        },
+                        {
                             cls: "fa-brands fa-github",
                             href: "https://github.com/eugen-bondarev/homeNetShare"
                         }
@@ -141,6 +153,10 @@ function initVue() {
                 {
                     title: "Rechner von sehr großen Zahlen",
                     links: [
+                        {
+                            cls: "fa-solid fa-download",
+                            href: "https://github.com/eugen-bondarev/real-long/releases/download/v1.0.0/real-long.zip"
+                        },
                         {
                             cls: "fa-brands fa-github",
                             href: "https://github.com/eugen-bondarev/real-long"
@@ -163,6 +179,10 @@ function initVue() {
                     title: "Leistungsstarker 2D-Renderer, mit Vulkan implementiert",
                     links: [
                         {
+                            cls: "fa-solid fa-download",
+                            href: "https://github.com/eugen-bondarev/VulkanMapRenderer/releases/download/v1.0.0/VulkanMapRenderer2D.zip"
+                        },
+                        {
                             cls: "fa-brands fa-github",
                             href: "https://github.com/eugen-bondarev/VulkanMapRenderer"
                         }
@@ -181,6 +201,10 @@ function initVue() {
                 {
                     title: "Ein kleines Sandbox-Spiel, mit OpenGL implementiert",
                     links: [
+                        {
+                            cls: "fa-solid fa-download",
+                            href: "https://github.com/eugen-bondarev/OpenGL-Sandbox-Game/releases/download/v1.0.0/OpenGLGame.zip"
+                        },
                         {
                             cls: "fa-brands fa-github",
                             href: "https://github.com/eugen-bondarev/NaturaForge"
@@ -202,6 +226,10 @@ function initVue() {
                 {
                     title: "Ein einfacher 3D-Renderer und 3D-Animation (Rigging)",
                     links: [
+                        {
+                            cls: "fa-solid fa-download",
+                            href: "https://github.com/eugen-bondarev/anima/releases/download/v1.0.0/anima.zip"
+                        },
                         {
                             cls: "fa-brands fa-github",
                             href: "https://github.com/eugen-bondarev/anima"
