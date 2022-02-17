@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eugen Bondarev</title>
+    <title>Eugen Bondarev | Portfolio</title>
     <link rel="stylesheet" href="style/main.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,9 +24,14 @@
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 </head>
-<body>
+<!-- <body class="theme--dark"> -->
+<body class="hide">
     <div id="app">
         <div class="contacts">
+            <button @click="toggleTheme()" class="button button--round">
+                <i v-if="!darkTheme" class="fa-xl fa-solid fa-moon"></i>
+                <i v-else class="fa-xl fa-solid fa-sun"></i>
+            </button>
             <a href="https://github.com/eugen-bondarev" target="_blank" class="button button--round">
                 <i class="fa-xl fa-brands fa-github"></i>
             </a>
@@ -41,7 +46,7 @@
             <div>
             </div>
             <div class="tooltip-parent">
-                <button @click="contact" class="contact-button color--dark email-tooltip__button button">
+                <button @click="contact" class="email-tooltip__button button button--1">
                     Kontaktieren
                 </button>
                 <div class="email-tooltip">
@@ -66,7 +71,7 @@
                             <h3 class="no-margin">
                                 {{ project.title }}
                             </h3>
-                            <div class="flex">
+                            <div class="flex flex--jcc">
                                 <a v-for="link in project.links" :href="link.href" target="_blank" class="project__button button--no-background button button--round">
                                     <i class="fa-xl" :class="link.cls"></i>
                                 </a>

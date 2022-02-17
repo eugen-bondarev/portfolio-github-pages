@@ -1,6 +1,138 @@
 * {
   font-family: 'Work Sans', sans-serif;
-  color: #f1eff8;
+}
+
+.color--dark {
+  color: #222125;
+}
+
+.contact-button {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background-color: #09090a;
+  color: white;
+}
+
+.contact-button:hover, .contact-button:active, .contact-button:focus {
+  background-color: #db4a07;
+  color: white;
+  -webkit-box-shadow: 2px 2px 10px black;
+          box-shadow: 2px 2px 10px black;
+}
+
+body {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  margin: 0;
+  min-height: 100vh;
+  padding-bottom: 100px;
+}
+
+body.hide {
+  display: none;
+}
+
+body.theme--dark {
+  background-color: #222125;
+}
+
+body.theme--dark * {
+  color: #f5f4f8;
+}
+
+body.theme--dark .menu > .button::after {
+  background: #f5f4f8;
+}
+
+body.theme--dark .project:hover .project__name::after {
+  background-color: #e6e6e6;
+}
+
+body.theme--dark .project .project__name::after {
+  background-color: rgba(230, 230, 230, 0.2);
+}
+
+body.theme--dark .languages table tr:nth-child(2n + 2) {
+  background-color: #29282d;
+}
+
+body.theme--dark .tech__el {
+  background-color: #4b4b4b;
+}
+
+body.theme--dark .section-with-border {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border: 2px solid rgba(230, 230, 230, 0.2);
+}
+
+body.theme--dark .section-with-border:hover {
+  border-color: #e6e6e6;
+}
+
+body.theme--dark .button.button--1 {
+  color: #222125;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+body.theme--dark .button.button--1:hover, body.theme--dark .button.button--1:active, body.theme--dark .button.button--1:focus {
+  background-color: #db4a07;
+  color: white;
+  -webkit-box-shadow: 2px 2px 10px black;
+          box-shadow: 2px 2px 10px black;
+}
+
+body:not(.theme--dark) {
+  background-color: #f5f4f8;
+}
+
+body:not(.theme--dark) .menu > .button::after {
+  background: #222125;
+}
+
+body:not(.theme--dark) .project:hover .project__name::after {
+  background-color: #d9d5e4;
+}
+
+body:not(.theme--dark) .project .project__name::after {
+  background-color: #edebf2;
+}
+
+body:not(.theme--dark) .languages table tr:nth-child(2n + 2) {
+  background-color: #edebf2;
+}
+
+body:not(.theme--dark) .tech__el {
+  background-color: #ceccd9;
+}
+
+body:not(.theme--dark) .section-with-border {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border: 2px solid #edebf2;
+}
+
+body:not(.theme--dark) .section-with-border:hover {
+  border-color: #d9d5e4;
+}
+
+body:not(.theme--dark) i {
+  color: #222125;
+}
+
+body:not(.theme--dark) .button.button--1 {
+  color: #f5f4f8;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background-color: #222125;
+}
+
+body:not(.theme--dark) .button.button--1:hover, body:not(.theme--dark) .button.button--1:active, body:not(.theme--dark) .button.button--1:focus {
+  background-color: #db4a07;
+  color: white;
+  -webkit-box-shadow: 2px 2px 10px #a097bd;
+          box-shadow: 2px 2px 10px #a097bd;
 }
 
 .fade-enter-active, .fade-leave-active {
@@ -24,7 +156,6 @@
 
 .button {
   padding: 10px 20px;
-  background: #f1eff8;
   padding: 10px 20px;
   border-radius: 100px;
   text-decoration: none;
@@ -34,7 +165,7 @@
   padding: 5px 0px;
   position: relative;
   background: transparent;
-  color: #f1eff8;
+  color: #f5f4f8;
 }
 
 .link::after {
@@ -46,7 +177,7 @@
   bottom: 0px;
   width: 0;
   height: 2px;
-  background-color: #f1eff8;
+  background-color: #f5f4f8;
 }
 
 .link:hover::after {
@@ -58,22 +189,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 10px;
 }
 
-.color--dark {
-  color: #222125;
-}
-
-.contact-button {
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-.contact-button:hover, .contact-button:active, .contact-button:focus {
-  background-color: #db4a07;
-  color: white;
-  -webkit-box-shadow: 2px 2px 10px black;
-          box-shadow: 2px 2px 10px black;
-}
-
 .container {
   width: 900px;
 }
@@ -82,15 +197,58 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
 }
 
-body {
-  background-color: #222125;
-  margin: 0;
-  min-height: 100vh;
-  padding-bottom: 100px;
-}
-
 .tooltip-parent {
   position: relative;
+}
+
+body.theme--dark .email-tooltip {
+  background-color: #f5f4f8;
+  color: #222125;
+}
+
+body.theme--dark .email-tooltip button {
+  background: transparent;
+}
+
+body.theme--dark .email-tooltip button:hover {
+  background: #222125;
+}
+
+body.theme--dark .email-tooltip button:hover i {
+  color: #f5f4f8;
+}
+
+body.theme--dark .email-tooltip button i {
+  color: #222125;
+}
+
+body.theme--dark .email-tooltip::before {
+  background-color: #f5f4f8;
+}
+
+body:not(.theme--dark) .email-tooltip {
+  background-color: #222125;
+  color: #f5f4f8;
+}
+
+body:not(.theme--dark) .email-tooltip button {
+  background: transparent;
+}
+
+body:not(.theme--dark) .email-tooltip button:hover {
+  background: #f5f4f8;
+}
+
+body:not(.theme--dark) .email-tooltip button:hover i {
+  color: #222125;
+}
+
+body:not(.theme--dark) .email-tooltip button i {
+  color: #f5f4f8;
+}
+
+body:not(.theme--dark) .email-tooltip::before {
+  background-color: #222125;
 }
 
 .email-tooltip {
@@ -104,8 +262,6 @@ body {
   left: -50px;
   top: 44px;
   padding: 10px;
-  background-color: #f1eff8;
-  color: #222125;
   border-radius: 7px;
   opacity: 0;
   -webkit-transition: 0.3s;
@@ -117,7 +273,7 @@ body {
 }
 
 .email-tooltip--ok button i {
-  color: #f1eff8 !important;
+  color: #f5f4f8 !important;
 }
 
 .email-tooltip button {
@@ -142,18 +298,6 @@ body {
   border-radius: 5px;
 }
 
-.email-tooltip button:hover {
-  background: #222125;
-}
-
-.email-tooltip button:hover i {
-  color: #f1eff8;
-}
-
-.email-tooltip button i {
-  color: #222125;
-}
-
 .email-tooltip--open {
   opacity: 1;
 }
@@ -166,7 +310,6 @@ body {
   height: 10px;
   top: -5px;
   left: 50%;
-  background-color: #f1eff8;
   -webkit-transform: rotateZ(45deg);
           transform: rotateZ(45deg);
 }
@@ -208,7 +351,7 @@ body {
   width: 0;
   height: 2px;
   display: block;
-  background: #f1eff8;
+  background: #f5f4f8;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   opacity: 0;
@@ -241,7 +384,7 @@ body {
   width: 100%;
   height: 2px;
   display: block;
-  background: #f1eff8;
+  background: #f5f4f8;
   opacity: 1;
 }
 
@@ -253,23 +396,15 @@ header .button, header .link {
   margin-left: 20px;
 }
 
-.section-with-border {
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  border: 2px solid rgba(230, 230, 230, 0.2);
-}
-
-.section-with-border:hover {
-  border-color: #e6e6e6;
+.flex--jcc {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .project {
   padding: 20px;
   margin-bottom: 30px;
-}
-
-.project:hover .project__name::after {
-  background-color: #e6e6e6;
 }
 
 .project__button {
@@ -292,11 +427,7 @@ header .button, header .link {
 
 .project__name a.button {
   background: transparent;
-  display: inline-block;
-  text-align: center;
-  width: 25px;
-  height: 25px;
-  padding: 10px;
+  display: block;
   margin-left: 10px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -316,7 +447,6 @@ header .button, header .link {
   bottom: 0px;
   width: calc(100% + 40px);
   height: 2px;
-  background-color: rgba(230, 230, 230, 0.2);
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -397,7 +527,6 @@ header .button, header .link {
 .tech__el {
   cursor: default;
   font-weight: 400;
-  background-color: #4b4b4b;
   padding: 2px 10px;
   border-radius: 4px;
   display: inline;
@@ -421,10 +550,6 @@ header .button, header .link {
   overflow: hidden;
   margin: auto;
   width: 100%;
-}
-
-.languages .section table tr:nth-child(2n + 2) {
-  background-color: #29282d;
 }
 
 .languages .section table td, .languages .section table th {
@@ -481,15 +606,17 @@ header .button, header .link {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 48px;
-  height: 48px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 56px;
+  height: 56px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   padding: 10px;
 }
 
 .button--round:not(.button--no-background):hover {
-  background: #f1eff8;
+  background: #f5f4f8;
 }
 
 .button--round:not(.button--no-background):hover i {
