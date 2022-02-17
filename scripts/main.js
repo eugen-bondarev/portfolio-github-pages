@@ -191,8 +191,10 @@ const app = new Vue({
                 ],
                 videos: [
                 ],
-                techStack: ["C++", "CMake", "OpenGL", "ImGui"],
-                description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis velit soluta rem, facere recusandae deserunt excepturi praesentium facilis. Saepe non accusamus adipisci hic voluptatem veniam, animi id minus qui in."
+                techStack: ["C++", "CMake", "OpenGL", "assimp", "ImGui"],
+                description: `Ein Programm, das Modellen und Animationen aus .fbx-Dateien lädt und rendert. 
+                <br>
+                Das Rendering ist mit OpenGL implementiert.`
             }
         ]
     }),
