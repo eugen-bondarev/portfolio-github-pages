@@ -154,7 +154,7 @@ function initVue() {
                     description: `
                         Dieses Programm ist durch dieses <a href="https://youtu.be/ujHHlJzcadE">Mathe-Video</a> inspiriert, das sich mit der Frage auseinandersetzt, was größer ist, 55^99 oder 99!
                         <br>
-                        Da die Rechnung von solch großen Zahlen in den berühmten Programmiersprachen nicht out of the box implementiert ist, habe ich mich dafür entschieden, diesen Rechner in C++ zu verwircklichen.
+                        Da die Rechnung von solch großen Zahlen in den berühmten Programmiersprachen nicht out of the box implementiert ist, habe ich mich dafür entschieden, diesen Rechner in C++ zu programmieren.
                         <br>
                         Er ist in der Lage, die mathematischen Operatoren +, -, *, /, pow und factorial auf Zahlen beliebiger Größe anzuwenden.
                     `
