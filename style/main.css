@@ -133,6 +133,9 @@
   .project .description {
     margin-top: 20px;
   }
+  .project .description .text {
+    margin-left: 20px;
+  }
   .languages > .section > .tech {
     width: 500px;
   }
@@ -563,10 +566,6 @@ body:not(.theme--dark) .email-tooltip::before {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.project .description .text {
-  margin-left: 20px;
 }
 
 .project .description .text p {
