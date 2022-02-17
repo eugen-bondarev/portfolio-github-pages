@@ -216,7 +216,7 @@ function initVue() {
                     ],
                     techStack: ["C++", "CMake", "OpenGL", "ImGui"],
                     description: `
-                        Für dieses kleine Spiel habe ich von OpenGL bentzt. Das Spiel utilisiert Instanced-Rendering, um die riesige Karte zu rendern.
+                        Für dieses kleine Spiel habe ich OpenGL bentzt. Das Spiel utilisiert Instanced-Rendering, um die riesige Karte zu rendern.
                         <br>
                         Die Grafik und Machaniken ähneln sich Terraria.
                         <br>
