@@ -218,7 +218,7 @@ function initVue() {
                     description: `
                         Für dieses kleine Spiel habe ich OpenGL bentzt. Das Spiel utilisiert Instanced-Rendering, um die riesige Karte zu rendern.
                         <br>
-                        Die Grafik und Machaniken ähneln sich Terraria.
+                        Die Grafik und Mechaniken ähneln sich Terraria.
                         <br>
                         Die Karte ist allerdings unendlich, dafür benutzte ich Perlin-Noise (wie in Minecraft).
                         `
