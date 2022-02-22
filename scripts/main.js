@@ -117,7 +117,7 @@ function initVue() {
                         ],
                         techStack: ["C++", "CMake", "AI", "OpenGL", "ImGui"],
                         description: `
-                            Ein Programm, dass sehr viele Snake-Spiele simuliert, die sich anfangs zufällig verhalten, fangen aber allmählich an, intelligentes Verhalten aufzuweisen.
+                            Ein Programm, das sehr viele Snake-Spiele simuliert, die sich anfangs zufällig verhalten, fangen aber allmählich an, intelligentes Verhalten aufzuweisen.
                             Es werden hierbei die genetischen Algorithmen benutzt, mit deren Hilfe folgende Prozesse stattfinden:
                             <ul>
                                 <li>Die besten Genome werden ausgewählt.</li>
